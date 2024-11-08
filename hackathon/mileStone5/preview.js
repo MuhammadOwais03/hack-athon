@@ -7,8 +7,14 @@ document.addEventListener("DOMContentLoaded", function () {
     var saveEducationButton = document.getElementsByClassName('saveEducationButton')[0];
     var editSkillsButton = document.getElementById("editSkillsButton");
     var editJobsButton = document.getElementById("editJobsButton");
-    var share_url = "".concat(window.location.origin, "/mileStone5/preview.html?username=").concat(encodeURIComponent(localStorage.getItem("name") || ""));
-    shareableLink.href = share_url;
+   const baseURL = "https://mile-stone-5.vercel.app";
+    const username = encodeURIComponent(localStorage.getItem("name") || "");
+    const shareURL = `${baseURL}/mileStone5/preview.html?username=${username}`;
+    
+    const shareableLink = document.getElementById("shareableLink");
+    if (shareableLink) {
+        shareableLink.href = shareURL;
+    }
     downloadBtn.addEventListener('click', function (e) {
         editInfoButton.style.display = 'none';
         saveInfoButton.style.display = 'none';
