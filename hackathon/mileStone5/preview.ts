@@ -12,8 +12,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const editJobsButton = document.getElementById("editJobsButton") as HTMLButtonElement;
 
 
-    let share_url = `${window.location.origin}/mileStone5/preview.html?username=${encodeURIComponent(localStorage.getItem("name") || "")}`;
-    shareableLink.href = share_url;
+    // let share_url = `${window.location.origin}/mileStone5/preview.html?username=${encodeURIComponent(localStorage.getItem("name") || "")}`;
+    // shareableLink.href = share_url;
+
+    const baseURL: string = "https://mile-stone-5.vercel.app";
+    const username: string = encodeURIComponent(localStorage.getItem("name") ?? "");
+    const shareURL: string = `${baseURL}/mileStone5/preview.html?username=${username}`;
+    
+    const shareableLink = document.getElementById("shareableLink") as HTMLAnchorElement;
+    if (shareableLink) {
+        shareableLink.href = shareURL;
+    }
 
     downloadBtn.addEventListener('click', (e) => {
         editInfoButton.style.display = 'none'
