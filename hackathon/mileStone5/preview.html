@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Preview</title>
+    <link rel="stylesheet" href="preview.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuid.min.js"></script>
+</head>
+<body>
+    <div class="resume-preview">
+        <h1>Resume Preview</h1>
+        <div id="preview">
+            <div class="profile-picture-container">
+                <img id="previewProfilePicture" src="" alt="Profile Picture" class="profile-picture">
+            </div>
+            <div class="info-sec">
+                <div class="info-sec-header">
+                    <h2 id="previewName" contenteditable="false">Name: </h2>
+                    <input type="text" id="nameInput" placeholder="Enter your name" style="display: none;">
+                    <p id="previewContact">Contact: </p>
+                    <input type="text" id="contactInput" placeholder="Enter your contact" style="display: none;">
+                </div>
+                <div class="info-sec-edit">
+                    <button id="editInfoButton">Edit Personal Info</button>
+                    <button id="editInfoButton" class="saveInfoButton" style="display: none;">Save Personal Info</button>
+                </div>
+            </div>
+            <div class="edu-sec">
+                <div class="edu-sec-header">
+                    <h3>Education</h3>
+                    <p id="previewEducation">Education: </p>
+                    <input type="text" id="degreeInput" placeholder="Enter your degree" style="display: none;">
+                    <input type="text" id="universityInput" placeholder="Enter your university" style="display: none;">
+                </div>
+                <div class="edu-sec-edit">
+                    <button id="editEducationButton">Edit Education</button>
+                    <button id="editEducationButton" class="saveEducationButton" style="display: none;">Save Education</button>
+                </div>
+            </div>
+            <h3>Skills</h3>
+            <ul id="previewSkills"></ul>
+            <div class="edit-button-container">
+                <button id="editSkillsButton">Edit Skills</button>
+            </div>
+            <div id="addSkillContainer" style="display: none;" class="input-container">
+                <input type="text" id="newSkill" placeholder="Add a new skill">
+                <button id="addSkillButton">Add Skill</button>
+            </div>
+            <h3>Work Experience</h3>
+            <ul id="previewJobs"></ul>
+            <div class="edit-button-container">
+                <button id="editJobsButton">Edit Jobs</button>
+            </div>
+            <div id="addJobContainer" style="display: none;" class="input-container">
+                <input type="text" id="newJob" placeholder="Add a new job">
+                <button id="addJobButton">Add Job</button>
+            </div>
+        </div>
+    </div>
+
+    <button id="downloadBtn">Download Resume</button>
+    <a href="#" target="_blank" id="share" id="shareBtn">Share Resume</a>
+
+    
+    <script src="preview.js" type="module"></script>
+    
+</body>
+</html>

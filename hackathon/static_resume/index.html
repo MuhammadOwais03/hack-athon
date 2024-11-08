@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Resume</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="resume">
+    <!-- Personal Information Section -->
+    <section class="personal-info">
+      <h2>Personal Information</h2>
+      <img id="profilePicture" src="prof_pic.webp" alt="Profile Picture" class="profile-picture">
+      <input type="file" id="uploadPicture" accept="image/*" style="display: none;">
+      <button id="uploadButton">Add Picture</button>
+
+      <label for="name">Name:</label>
+      <input type="text" id="name" placeholder="Enter your name" value="John Doe">
+      
+      <label for="contact">Contact:</label>
+      <input type="email" id="contact" placeholder="Enter your email" value="johndoe@example.com">
+    </section>
+
+    <!-- Education Section -->
+    <section class="education">
+      <h2>Education</h2>
+      <label for="degree">Degree:</label>
+      <input type="text" id="degree" placeholder="Enter your degree" value="Bachelor of Science in Computer Science">
+      
+      <label for="university">University:</label>
+      <input type="text" id="university" placeholder="Enter your university" value="University XYZ, 2023">
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills">
+      <h2>Skills</h2>
+      <input type="text" id="newSkill" placeholder="Add a new skill">
+      <button id="addSkill">Add Skill</button>
+      <ul id="skillsList">
+        <li>JavaScript</li>
+        <li>Python</li>
+        <li>HTML & CSS</li>
+        <li>TypeScript</li>
+      </ul>
+    </section>
+
+    <!-- Work Experience Section -->
+    <section class="work-experience">
+      <h2>Work Experience</h2>
+      <label for="job1">Job 1:</label>
+      <input type="text" id="job1" placeholder="Enter your first job" value="Software Developer at Company ABC">
+      
+      <label for="job2">Job 2:</label>
+      <input type="text" id="job2" placeholder="Enter your second job" value="Intern at Tech Solutions">
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

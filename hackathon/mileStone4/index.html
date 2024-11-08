@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Resume</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="resume">
+        <!-- Personal Information Section -->
+        <section class="personal-info">
+            <h2>Personal Information</h2>
+            <img id="profilePicture" src="./prof_pic.webp" alt="Profile Picture" class="profile-picture">
+            <input type="file" id="uploadPicture" accept="image/*" style="display: none;">
+            <button id="uploadButton">Add Picture</button>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+
+            <label for="contact">Contact:</label>
+            <input type="email" id="contact" placeholder="Enter your email" required>
+        </section>
+
+        <!-- Education Section -->
+        <section class="education">
+            <h2>Education</h2>
+            <label for="degree">Degree:</label>
+            <input type="text" id="degree" placeholder="Enter your degree" required>
+
+            <label for="university">University:</label>
+            <input type="text" id="university" placeholder="Enter your university" required>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills">
+            <h2>Skills</h2>
+            <input type="text" id="newSkill" placeholder="Add a new skill">
+            <button id="addSkill">Add Skill</button>
+            <button id="toggleSkills">Show Skills</button>
+            <ul id="skillsList"></ul>
+        </section>
+
+        <!-- Work Experience Section -->
+        <section class="work-experience">
+            <h2>Work Experience</h2>
+            <div id="workExperienceContainer"></div>
+            <button id="addJob">Add Job</button>
+        </section>
+
+        <button id="generateButton">Generate Preview</button> <!-- ID updated -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

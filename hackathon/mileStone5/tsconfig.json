@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "es6", // or "esnext"
+    "module": "es6", // Use "commonjs" if you're using Node.js environment
+    "outDir": "./dist", // Specify your output directory
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "strict": true
+  },
+  "include": ["*.ts"], // Adjust this according to your project structure
+  "exclude": ["node_modules"]
+}

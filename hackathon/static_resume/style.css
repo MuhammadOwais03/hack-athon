@@ -1,0 +1,115 @@
+/* Global styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f2f5;
+  }
+  
+  .resume {
+    width: 90%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Section Titles */
+  h2 {
+    font-size: 1.5em;
+    color: #333;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+  }
+  
+  /* Profile Picture */
+  .profile-picture {
+    display: block;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 10px auto;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  #uploadButton {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  #uploadButton:hover {
+    background-color: #45a049;
+  }
+  
+  /* Input Fields */
+  label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #555;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="file"],
+  #newSkill {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 0.9em;
+  }
+  
+  /* Add Skill Button */
+  #addSkill {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    display: block;
+    transition: background-color 0.3s;
+  }
+  
+  #addSkill:hover {
+    background-color: #45a049;
+  }
+  
+  /* Skills List */
+  #skillsList {
+    list-style-type: none;
+    margin-top: 10px;
+    padding-left: 0;
+  }
+  
+  #skillsList li {
+    background-color: #e0f7e9;
+    padding: 5px 10px;
+    border-radius: 3px;
+    color: #333;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+  }
+  
